@@ -9,12 +9,14 @@ Observations:
 
 ```python
 #Import dependencies
+%matplotlib inline
 import csv
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 import matplotlib.patches as mpatches
+from IPython.display import Image
 ```
 
 
@@ -192,12 +194,19 @@ plt.text(0.05, 0.95, textstr, fontsize=14,verticalalignment='center', bbox=props
 #Plot
 plt.scatter(urban_x, urban_y, s=urban_z*7, c="coral",alpha=0.6, linewidth=1,edgecolors="black")
 plt.scatter(sub_x, sub_y, s=sub_z*7, c="lightskyblue",alpha=0.6, linewidth=1,edgecolors="black")
-plt.scatter(rural_x, rural_y, s=rural_z*7, c="gold",alpha=0.6, linewidth=1,edgecolors="black")
-plt.show()
+plt.scatter(rural_x, rural_y, s=rural_z*7, c="gold",alpha=0.6, linewidth=1,edgecolors="black") 
+#plt.show()
 ```
 
 
-![png](output_13_0.png)
+
+
+    <matplotlib.collections.PathCollection at 0x18eb0fcbf60>
+
+
+
+
+![png](output_13_1.png)
 
 
 Total Fares by City Type
@@ -211,11 +220,26 @@ explode = (0.1, 0,0)
 plt.title("% of Total Fares by City Type")
 plt.pie(sizes, explode=explode, labels=labels, colors=colors,
         autopct="%1.1f%%", shadow=True, counterclock = False, startangle=140)
-plt.show()
+#plt.show()
 ```
 
 
-![png](output_15_0.png)
+
+
+    ([<matplotlib.patches.Wedge at 0x18eb1071c50>,
+      <matplotlib.patches.Wedge at 0x18eb1078630>,
+      <matplotlib.patches.Wedge at 0x18eb10850f0>],
+     [Text(1.05511,0.571609,'Urban'),
+      Text(-0.839058,-0.711324,'Suburban'),
+      Text(-0.969827,0.519071,'Rural')],
+     [Text(0.615482,0.333439,'62.0%'),
+      Text(-0.457668,-0.387995,'31.4%'),
+      Text(-0.528997,0.28313,'6.6%')])
+
+
+
+
+![png](output_15_1.png)
 
 
 Total Rides by City Type
@@ -228,11 +252,26 @@ explode = (0.1, 0,0)
 plt.title("% of Total Rides by City Type")
 plt.pie(sizes, explode=explode, labels=labels, colors=colors,
         autopct="%1.1f%%", shadow=True, counterclock = False, startangle=140)
-plt.show()
+#plt.show()
 ```
 
 
-![png](output_17_0.png)
+
+
+    ([<matplotlib.patches.Wedge at 0x18eb10b5b70>,
+      <matplotlib.patches.Wedge at 0x18eb10bd5f8>,
+      <matplotlib.patches.Wedge at 0x18eb10c7048>],
+     [Text(1.13813,0.380357,'Urban'),
+      Text(-0.972796,-0.513486,'Suburban'),
+      Text(-0.946305,0.560809,'Rural')],
+     [Text(0.663906,0.221875,'67.5%'),
+      Text(-0.530616,-0.280084,'27.3%'),
+      Text(-0.516166,0.305896,'5.2%')])
+
+
+
+
+![png](output_17_1.png)
 
 
 Total Driver by City Type
@@ -245,9 +284,24 @@ explode = (0.1, 0,0)
 plt.title("% of Total Drivers by City Type")
 plt.pie(sizes, explode=explode, labels=labels, colors=colors,
         autopct="%1.1f%%", shadow=True, counterclock = False, startangle=140)
-plt.show()
+#plt.show()
 ```
 
 
-![png](output_19_0.png)
+
+
+    ([<matplotlib.patches.Wedge at 0x18eb10f1a58>,
+      <matplotlib.patches.Wedge at 0x18eb10fb4e0>,
+      <matplotlib.patches.Wedge at 0x18eb10fbf60>],
+     [Text(1.19999,-0.00513273,'Urban'),
+      Text(-1.09521,-0.102557,'Suburban'),
+      Text(-0.907568,0.621547,'Rural')],
+     [Text(0.699994,-0.00299409,'77.9%'),
+      Text(-0.597387,-0.0559402,'19.0%'),
+      Text(-0.495037,0.339026,'3.1%')])
+
+
+
+
+![png](output_19_1.png)
 
